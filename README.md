@@ -1,8 +1,7 @@
 # PicFly
 
-![PicFly Logo](([https://i.imgur.com/xnJCsKX.png](https://imgur.com/b5SYdeG)))
-![PicFly Logo](([https://i.imgur.com/5FIHQgQ.png](https://imgur.com/IAymFM7)))
-)
+![PicFly Logo](https://i.imgur.com/xnJCsKX.png)
+![PicFly Logo](https://i.imgur.com/5FIHQgQ.png)
 
 PicFly is a lightweight, efficient, and feature-rich image loading library for Android. It provides a simple and fluent API for loading images from URLs into ImageViews with support for caching, transformations, and more.
 
