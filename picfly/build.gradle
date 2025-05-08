@@ -55,7 +55,7 @@ afterEvaluate {
         publications {
             release(MavenPublication) {
                 from components.release
-                groupId = 'com.github.Tuhinx'
+                groupId = 'com.github.tuhinx'
                 artifactId = 'picfly'
                 version = '1.0.0'
             }
