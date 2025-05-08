@@ -1,6 +1,8 @@
 # PicFly
 
-![PicFly Logo](https://i.imgur.com/DvpvklR.png)
+![PicFly Logo]((https://i.imgur.com/xnJCsKX.jpeg))
+![PicFly Logo],((https://i.imgur.com/5FIHQgQ.jpeg))
+)
 
 PicFly is a lightweight, efficient, and feature-rich image loading library for Android. It provides a simple and fluent API for loading images from URLs into ImageViews with support for caching, transformations, and more.
 
@@ -26,21 +28,43 @@ PicFly is a lightweight, efficient, and feature-rich image loading library for A
 
 Add the JitPack repository to your root build.gradle:
 
-```gradle
-allprojects {
-    repositories {
-        ...
-        maven { url 'https://jitpack.io' }
-    }
+
+### For Gradle
+
+```groovy
+dependencyResolutionManagement {
+		repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+		repositories {
+			mavenCentral()
+			maven { url 'https://jitpack.io' }
+		}
+	}
+
+dependencies {
+     implementation "com.github.Tuhinx:PicFly:1.0.0"
+	}
 }
+
 ```
 
-Add the dependency:
+## For Kotlin
 
-```gradle
+```gradle.kts
+	dependencyResolutionManagement {
+		repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+		repositories {
+			mavenCentral()
+			maven { url = uri("https://jitpack.io") }
+		}
+	}
+
+
 dependencies {
-    implementation 'com.github.yourusername:picfly:1.0.0'
+     implementation("com.github.Tuhinx:PicFly:1.0.0")
+	}
+	}
 }
+
 ```
 
 ## Usage
@@ -249,7 +273,7 @@ PicFly.get(context)
 ```
 MIT License
 
-Copyright (c) 2025 Your Name
+Copyright (c) 2025 TuhinX
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
