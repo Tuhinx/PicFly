@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace 'com.tuhinx.picfly'
+    namespace 'com.github.picfly'
     compileSdk 35
 
     defaultConfig {
@@ -55,7 +55,7 @@ afterEvaluate {
         publications {
             release(MavenPublication) {
                 from components.release
-                groupId = 'com.github.tuhinx'
+                groupId = 'com.github'
                 artifactId = 'picfly'
                 version = '1.0.0'
             }

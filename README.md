@@ -1,96 +1,132 @@
-# PicFly
-
 <p align="center">
-  <img src="https://i.imgur.com/xnJCsKX.png" alt="PicFly Logo 1" width="160"/>
-  <img src="https://i.imgur.com/5FIHQgQ.png" alt="PicFly Logo 2" width="160"/>
+  <img src="https://i.imgur.com/xnJCsKX.png" alt="PicFly Logo 1" width="180"/>
 </p>
 
+<h1 align="center">PicFly</h1>
 
-PicFly is a lightweight, efficient, and feature-rich image loading library for Android. It provides a simple and fluent API for loading images from URLs into ImageViews with support for caching, transformations, and more.
+<p align="center">
+  <b>A lightweight, efficient image loading library for Android</b>
+</p>
 
-## Features
+<p align="center">
+  <a href="#features">Features</a> •
+  <a href="#installation">Installation</a> •
+  <a href="#usage">Usage</a> •
+  <a href="#advanced-usage">Advanced Usage</a> •
+  <a href="#license">License</a>
+</p>
 
-- **Simple API**: Fluent interface with method chaining for easy use
-- **Memory Caching**: Efficient caching using LruCache
-- **Disk Caching**: Persistent caching between app sessions
-- **Placeholder Support**: Show placeholder images while loading
-- **Error Handling**: Display error images when loading fails
-- **Image Transformations**:
-  - Blur with customizable radius
-  - Grayscale
-  - Support for custom transformations
-- **Image Resizing**: Resize images to specific dimensions
-- **RecyclerView Support**: Optimized for efficient image loading in RecyclerViews
-- **Preloading**: Preload images for smoother scrolling
-- **Kotlin & Java Support**: Works seamlessly with both languages
+<p align="center">
+  <img src="https://img.shields.io/badge/Platform-Android-green.svg" alt="Platform Android"/>
+  <img src="https://img.shields.io/badge/Min%20SDK-24-brightgreen.svg" alt="Min SDK 24"/>
+  <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License MIT"/>
+  <img src="https://img.shields.io/badge/Version-1.0.0-orange.svg" alt="Version 1.0.0"/>
+</p>
 
-## Installation
+<br>
+
+## 📱 Overview
+
+PicFly is a modern image loading library for Android that provides a simple and fluent API for loading images from URLs into ImageViews. It's designed to be lightweight yet powerful, with support for caching, transformations, and more.
+
+## ✨ Features
+
+- **🚀 Simple API**: Fluent interface with method chaining for easy use
+- **💾 Memory Caching**: Efficient caching using LruCache
+- **💿 Disk Caching**: Persistent caching between app sessions
+- **🖼️ Placeholder Support**: Show placeholder images while loading
+- **⚠️ Error Handling**: Display error images when loading fails
+- **🔄 Image Transformations**:
+  - 🌫️ Blur with customizable radius
+  - ⚪ Grayscale
+  - 🛠️ Support for custom transformations
+- **📏 Image Resizing**: Resize images to specific dimensions
+- **📜 RecyclerView Support**: Optimized for efficient image loading in RecyclerViews
+- **⏱️ Preloading**: Preload images for smoother scrolling
+- **🔄 Kotlin & Java Support**: Works seamlessly with both languages
+
+## 📦 Installation
 
 ### Gradle
 
-Add the JitPack repository to your root build.gradle:
-
-
-### For Gradle
+Add the JitPack repository to your project-level build.gradle:
 
 ```groovy
 dependencyResolutionManagement {
-		repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
-		repositories {
-			mavenCentral()
-			maven { url 'https://jitpack.io' }
-		}
-	}
-
-dependencies {
-     implementation "com.github.Tuhinx:PicFly:1.0.0"
-	}
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
 }
-
 ```
 
-## For Kotlin
+Add the dependency to your app-level build.gradle:
 
-```gradle.kts
-	dependencyResolutionManagement {
-		repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
-		repositories {
-			mavenCentral()
-			maven { url = uri("https://jitpack.io") }
-		}
-	}
-
-
+```groovy
 dependencies {
-     implementation("com.github.Tuhinx:PicFly:1.0.0")
-	}
-	}
+    implementation 'com.github:picfly:1.0.0'
 }
-
 ```
 
-## Usage
+### Kotlin DSL
+
+```kotlin
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        mavenCentral()
+        maven { url = uri("https://jitpack.io") }
+    }
+}
+
+dependencies {
+    implementation("com.github:picfly:1.0.0")
+}
+```
+
+## 🚀 Usage
 
 ### Basic Usage
 
+<table>
+<tr>
+<th>Java</th>
+<th>Kotlin</th>
+</tr>
+<tr>
+<td>
+
 ```java
-// Java
 PicFly.get(context)
     .load("https://example.com/image.jpg")
     .into(imageView);
 ```
 
+</td>
+<td>
+
 ```kotlin
-// Kotlin
 PicFly.get(context)
     .load("https://example.com/image.jpg")
     .into(imageView)
 ```
+
+</td>
+</tr>
+</table>
 
 ### With Placeholder and Error Handling
 
+<table>
+<tr>
+<th>Java</th>
+<th>Kotlin</th>
+</tr>
+<tr>
+<td>
+
 ```java
-// Java
 PicFly.get(context)
     .load("https://example.com/image.jpg")
     .placeholder(R.drawable.placeholder)
@@ -98,8 +134,10 @@ PicFly.get(context)
     .into(imageView);
 ```
 
+</td>
+<td>
+
 ```kotlin
-// Kotlin
 PicFly.get(context)
     .load("https://example.com/image.jpg")
     .placeholder(R.drawable.placeholder)
@@ -107,90 +145,85 @@ PicFly.get(context)
     .into(imageView)
 ```
 
-### With Transformations
+</td>
+</tr>
+</table>
+
+### Image Transformations
+
+<table>
+<tr>
+<th>Java</th>
+<th>Kotlin</th>
+</tr>
+<tr>
+<td>
 
 ```java
-// Java - Grayscale
+// Grayscale
 PicFly.get(context)
     .load("https://example.com/image.jpg")
     .grayscale()
     .into(imageView);
 
-// Java - Blur
+// Blur
 PicFly.get(context)
     .load("https://example.com/image.jpg")
     .blur(15f) // Radius: 0-25
     .into(imageView);
 ```
 
+</td>
+<td>
+
 ```kotlin
-// Kotlin - Grayscale
+// Grayscale
 PicFly.get(context)
     .load("https://example.com/image.jpg")
     .grayscale()
     .into(imageView)
 
-// Kotlin - Blur
+// Blur
 PicFly.get(context)
     .load("https://example.com/image.jpg")
     .blur(15f) // Radius: 0-25
     .into(imageView)
 ```
 
-### With Resizing
+</td>
+</tr>
+</table>
+
+## 🔍 Advanced Usage
+
+### Image Resizing
 
 ```java
-// Java
 PicFly.get(context)
     .load("https://example.com/image.jpg")
     .resize(300, 300)
     .into(imageView);
-```
-
-```kotlin
-// Kotlin
-PicFly.get(context)
-    .load("https://example.com/image.jpg")
-    .resize(300, 300)
-    .into(imageView)
 ```
 
 ### RecyclerView Integration
 
 ```java
-// Java
 PicFly.get(context)
     .load("https://example.com/image.jpg")
     .into(imageView, viewHolder);
 ```
 
-```kotlin
-// Kotlin
-PicFly.get(context)
-    .load("https://example.com/image.jpg")
-    .into(imageView, viewHolder)
-```
-
 ### Preloading Images
 
 ```java
-// Java
 PicFly.get(context)
     .load("https://example.com/image.jpg")
     .preload();
 ```
 
-```kotlin
-// Kotlin
-PicFly.get(context)
-    .load("https://example.com/image.jpg")
-    .preload()
-```
-
-### Clearing Caches
+### Cache Management
 
 ```java
-// Java
 // Clear memory cache
 PicFly.get(context).clearMemoryCache();
 
@@ -201,23 +234,11 @@ PicFly.get(context).clearDiskCache();
 PicFly.get(context).clearAllCaches();
 ```
 
-```kotlin
-// Kotlin
-// Clear memory cache
-PicFly.get(context).clearMemoryCache()
-
-// Clear disk cache
-PicFly.get(context).clearDiskCache()
-
-// Clear all caches
-PicFly.get(context).clearAllCaches()
-```
-
 ### RecyclerView Preloading
 
 ```java
-// Java
-public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> implements RecyclerViewPreloader.PreloadModelProvider<MyItem> {
+public class MyAdapter extends RecyclerView.Adapter<MyViewHolder>
+    implements RecyclerViewPreloader.PreloadModelProvider<MyItem> {
 
     private List<MyItem> items;
 
@@ -243,13 +264,10 @@ RecyclerViewPreloader<MyItem> preloader = PicFly.get(this)
 recyclerView.addOnScrollListener(preloader);
 ```
 
-## Custom Transformations
-
-You can create custom transformations by implementing the `Transformation` interface:
+### Custom Transformations
 
 ```java
 public class CustomTransformation implements Transformation {
-
     @Override
     public Bitmap transform(Bitmap source) {
         // Apply your transformation here
@@ -270,7 +288,10 @@ PicFly.get(context)
     .into(imageView);
 ```
 
-## License
+## 📄 License
+
+<details>
+<summary>MIT License</summary>
 
 ```
 MIT License
@@ -295,3 +316,11 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
+
+</details>
+
+---
+
+<p align="center">
+  <b>Made with ❤️ by TuhinX</b>
+</p>
