@@ -1,8 +1,8 @@
 # PicFly
 
 <p align="center">
-  <img src="https://i.imgur.com/xnJCsKX.png" alt="PicFly Logo 1" width="150"/>
-  <img src="https://i.imgur.com/5FIHQgQ.png" alt="PicFly Logo 2" width="150"/>
+  <img src="https://i.imgur.com/xnJCsKX.png" alt="PicFly Logo 1" width="160"/>
+  <img src="https://i.imgur.com/5FIHQgQ.png" alt="PicFly Logo 2" width="160"/>
 </p>
 
 
