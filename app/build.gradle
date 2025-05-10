@@ -45,7 +45,6 @@ dependencies {
     androidTestImplementation libs.ext.junit
     androidTestImplementation libs.espresso.core
 
-    // PicFly library module
-    implementation project(':picfly')
+    implementation 'com.github.picfly:PicFly:2.0.1'
 
 }
