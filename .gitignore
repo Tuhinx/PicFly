@@ -33,7 +33,7 @@ signing.properties
 fabric.properties
 
 # Library submodules
-/picfly/
+#/picfly/
 
 # Log/Backup files
 *.log
