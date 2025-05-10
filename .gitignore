@@ -1,0 +1,43 @@
+# Built application files
+*.apk
+*.ap_
+*.aab
+
+# Gradle files
+.gradle/
+build/
+**/build/
+
+# Local configuration
+local.properties
+*.iml
+.idea/
+
+# macOS
+.DS_Store
+
+# Android Studio captures
+captures/
+
+# NDK/External builds
+.externalNativeBuild/
+.cxx/
+
+# Keystore files
+*.jks
+
+# Signing configs
+signing.properties
+
+# Crashlytics/Analytics
+fabric.properties
+
+# Library submodules
+#/picfly/
+
+# Log/Backup files
+*.log
+*.bak
+
+# VS Code
+.vscode/
