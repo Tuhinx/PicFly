@@ -108,7 +108,7 @@ Add the dependency to your app-level build.gradle:
 
 ```groovy
 dependencies {
-    implementation 'com.github.picfly:PicFly:2.0.1'
+    implementation 'com.github.tuhinx:picfly:2.0.1'
 }
 ```
 
@@ -124,7 +124,7 @@ dependencyResolutionManagement {
 }
 
 dependencies {
-    implementation("com.github.picfly:PicFly:2.0.1")
+    implementation("com.github.tuhinx:picfly:2.0.1")
 }
 ```
 
